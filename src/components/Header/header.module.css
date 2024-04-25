@@ -1,0 +1,53 @@
+.header {
+  padding-left: 60px;
+  padding-right: 60px;
+  height: 120px;
+  font-size: 15px;
+  font-weight: 400;
+}
+.header__info {
+  height: 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.border {
+  border-bottom: 1px solid #e0e1e6;
+}
+.header__links {
+  display: flex;
+  gap: 16px;
+}
+.client {
+  padding-right: 16px;
+  border-right: 1px solid #e0e1e6;
+}
+.header__contacts {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.bold_red {
+  padding-left: 8px;
+  font-weight: 500;
+  color: #760135;
+}
+.city {
+  gap: 0px;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+.header__info_nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.bold_green {
+  padding-left: 8px;
+  font-weight: 500;
+  color: #25b456;
+}
