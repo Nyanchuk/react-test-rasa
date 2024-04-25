@@ -1,0 +1,58 @@
+.card {
+  box-sizing: border-box;
+  height: 336px;
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.card span {
+  font-weight: 400;
+  font-size: 15px;
+  color: rgba(40, 40, 40, 1);
+}
+.card h2 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 17px;
+  color: rgba(17, 17, 17, 1);
+}
+.card__info_link h3 {
+  margin: 0;
+  margin-top: 8px;
+  font-weight: 500;
+  font-size: 17px;
+  color: rgba(118, 1, 53, 1);
+}
+.card__info_link {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.card__info_link a {
+  font-weight: 400;
+  font-size: 13px;
+  color: rgba(40, 40, 40, 1);
+}
+.card__images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 23px;
+}
+.cards__images_car {
+    background-size: cover;
+    background-position: center;
+    width: 310px;
+}
+.card__images_arrow {
+  cursor: pointer;
+  width: 43px;
+  opacity: 0.2;
+  transition: all 0.3s;
+}
+.card__images_arrow:hover {
+  opacity: 1;
+}
