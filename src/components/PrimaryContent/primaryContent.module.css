@@ -1,0 +1,73 @@
+.primaryContent__horiz {
+  position: relative;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(
+    to right,
+    rgba(239, 249, 255, 1),
+    rgba(254, 228, 255, 1)
+  );
+}
+.primaryContent__lineimg {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.primaryContent__carimg {
+    position: absolute;
+    right: 6.5%;
+    top: 0;
+}
+.primaryContent__ellipseimg {
+  position: absolute;
+  top: 50%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+}
+.primaryContent__horiz_info {
+  padding-left: 60px;
+  padding-right: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+.primaryContent__horiz_links {
+  padding-top: 16px;
+  margin-bottom: 71.5px;
+  display: flex;
+  gap: 8px;
+  font-size: 13px;
+  color: rgb(72, 72, 72);
+}
+.primaryContent__vertical {
+  padding-left: 60px;
+  padding-right: 60px;
+  height: 104px;
+  background: linear-gradient(to bottom, transparent, rgba(239, 249, 255, 1));
+}
+h1 {
+  margin: 0;
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 38px;
+  color: rgba(0, 0, 0, 1);
+}
+.slogan {
+  margin: 0;
+  margin-bottom: 24px;
+  font-weight: 400;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 1);
+}
+.primaryContent__button {
+  width: 231px;
+  height: 48px;
+  background-color: rgba(118, 1, 53, 1);
+  border: 1px solid rgba(118, 1, 53, 1);
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+}
