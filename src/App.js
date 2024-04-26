@@ -69,11 +69,11 @@ function App() {
               </div>
             </div>
           </div>
-          {/* <div className={styles.main__contain_card}>
+          <div className={styles.main__contain_card}>
             {cards.map((card) => (
               <Card key={`card_${card.id}`} card={card} />
             ))}
-          </div> */}
+          </div>
           {/* <div className={styles.main__content}>
             {cardsCarSeller
               .slice(0, showAllCards ? cardsCarSeller.length : 6)

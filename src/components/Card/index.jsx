@@ -30,7 +30,7 @@ export default function Card({ card }) {
         </div>
       </div>
       <div className={styles.card__images}>
-      <img
+        <img
           className={styles.card__images_arrow}
           src={MainImages.chevronFore}
           alt="prev image"
