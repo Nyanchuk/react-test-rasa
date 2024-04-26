@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./app.module.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -9,8 +9,26 @@ import { cardsData, cardsDataSeller } from "./data";
 import CardSeller from "./components/CardSeller";
 
 function App() {
+  const [showAllCards, setShowAllCards] = useState(false);
   const [cards, setCards] = useState([...cardsData]);
   const [cardsCarSeller, setCardsCarSeller] = useState([...cardsDataSeller]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setShowAllCards(window.innerWidth >= 770);
+    };
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const handleShowAllCards = () => {
+    setShowAllCards(true);
+  };
 
   return (
     <div>
@@ -57,11 +75,15 @@ function App() {
             ))}
           </div>
           <div className={styles.main__content}>
-            {cardsCarSeller.map((card) => (
-              <CardSeller key={`card_${card.id}`} card={card} />
-            ))}
+          {cardsCarSeller.slice(0, showAllCards ? cardsCarSeller.length : 6).map((card) => (
+        <CardSeller key={`card_${card.id}`} card={card} />
+      ))}
           </div>
-          <button className={styles.main__cards_check}>Показать все машины</button>
+          {!showAllCards && (
+        <button className={styles.main__cards_check} onClick={handleShowAllCards}>
+          Показать все машины
+        </button>
+      )}
           <div className={styles.main__contein_form}>
             <span>
               Не нашли автомобиль у нас, но нужен автокредит?{" "}
