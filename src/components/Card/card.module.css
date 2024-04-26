@@ -50,9 +50,9 @@
   gap: 23px;
 }
 .cards__images_car {
-    background-size: cover;
-    background-position: center;
-    width: 310px;
+  background-size: cover;
+  background-position: center;
+  width: 310px;
 }
 .card__images_arrow {
   cursor: pointer;
@@ -62,4 +62,28 @@
 }
 .card__images_arrow:hover {
   opacity: 1;
+}
+@media (max-width: 768px) {
+  .card {
+    box-sizing: border-box;
+    height: 220px;
+  }
+  .card__info p {
+    display: none;
+  }
+  .card__info h3 {
+    margin: 0;
+    margin-bottom: 16px;
+  }
+  .card__images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+  }
+  .cards__images_car {
+    background-size: cover;
+    background-position: center;
+    width: 256px;
+  }
 }

@@ -238,5 +238,11 @@ td:last-child {
     box-sizing: border-box;
     height: 40px;
   }
+  .main__contain_card {
+    box-sizing: border-box;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 1px;
+  }
   
 }
