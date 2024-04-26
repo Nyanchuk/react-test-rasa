@@ -33,8 +33,8 @@ function App() {
   return (
     <div>
       <Header />
-      {/* <PrimaryContent />
-      <section className={styles.main}>
+      <PrimaryContent />
+      {/* <section className={styles.main}>
         <div className={styles.main__contain}>
           <div className={styles.main__contain_list}>
             <h2>Выберите себе авто</h2>
@@ -132,8 +132,8 @@ function App() {
             </div>
           </div>
         </div>
-      </section>
-      <Footer /> */}
+      </section> */}
+      {/* <Footer /> */}
     </div>
   );
 }

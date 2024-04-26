@@ -105,3 +105,45 @@ h1 {
     height: 30px;
   }
 }
+@media (max-width: 430px) {
+  .primaryContent__horiz {
+    height: 450px;
+    background: linear-gradient(
+      to bottom right,
+      rgba(239, 249, 255, 1),
+      rgb(251, 177, 217)
+    );
+  }
+  .primaryContent__horiz_info {
+    flex-direction: column;
+  }
+  .primaryContent__horiz_links {
+    display: flex;
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  .primaryContent__button {
+    display: none;
+  }
+  .primaryContent__lineimg {
+    top: -42px;
+    left: 17%;
+    z-index: -99;
+  }
+  .primaryContent__carimg {
+    width: 400px;
+    position: absolute;
+    left: 37%;
+    top: 67%;
+    transform: translate(-50%, -50%);
+    z-index: -9;
+  }
+  .primaryContent__vertical {
+    display: none;
+  }
+  .primaryContent__ellipseimg {
+    display: none;
+  }
+}

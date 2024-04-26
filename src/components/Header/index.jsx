@@ -1,7 +1,24 @@
 import styles from "./header.module.css";
 import HeaderImages from "../../images/header_img/header_img";
+import { useEffect, useState } from "react";
 
 export default function Header() {
+  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth >= 430);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsWideScreen(window.innerWidth >= 430);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className={styles.header}>
       <div className={`${styles.header__info} ${styles.border}`}>
@@ -61,7 +78,11 @@ export default function Header() {
         <div className={styles.header__block_contacts}>
           <div className={`${styles.header__block_info} ${styles.city}`}>
             <img src={HeaderImages.phone} alt="phone" />
-            <span className={styles.bold_green}>Заказать звонок</span>
+            {isWideScreen ? (
+              <span className={styles.bold_green}>Заказать звонок</span>
+            ) : (
+              <span className={styles.bold_green}>8 800 775-56-06</span>
+            )}
           </div>
           <div className={`${styles.header__block_info} ${styles.city}`}>
             <img src={HeaderImages.login} alt="phone" />

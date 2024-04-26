@@ -143,11 +143,11 @@
 }
 @media (max-width: 430px) {
   .header {
-    height: 223px;
+    height: 233px;
   }
   .position {
     position: relative;
-    top: -10px;
+    top: -5px;
     left: 16px;
   }
   .header__links_operation a:nth-child(n + 4) {
@@ -172,13 +172,14 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    border-bottom: none;
   }
   .header__nav_logo {
     box-sizing: border-box;
     padding-left: 16px;
     padding-right: 16px;
     width: 100%;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     border-bottom: 1px solid #e0e1e6;
   }
   .header__block_contacts {
@@ -186,7 +187,7 @@
     padding-left: 16px;
     padding-right: 16px;
     width: 100%;
-    height: 56px;
+    height: 50px;
     justify-content: space-between;
     border-top: 1px solid #e0e1e6;
   }
