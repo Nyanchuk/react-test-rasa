@@ -43,7 +43,7 @@ function App() {
               <img src={MainImages.chevron} />
             </div>
           </div>
-          {/* <div className={styles.main__contain_search}>
+          <div className={styles.main__contain_search}>
             <div className={styles.main__contain_stamp}>
               <span>Марка</span>
               <div className={styles.main__contain_input}>
@@ -68,7 +68,7 @@ function App() {
                 <input placeholder="До"></input>
               </div>
             </div>
-          </div> */}
+          </div>
           {/* <div className={styles.main__contain_card}>
             {cards.map((card) => (
               <Card key={`card_${card.id}`} card={card} />
