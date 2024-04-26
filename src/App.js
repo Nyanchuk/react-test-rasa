@@ -12,10 +12,14 @@ function App() {
   const [showAllCards, setShowAllCards] = useState(false);
   const [cards, setCards] = useState([...cardsData]);
   const [cardsCarSeller, setCardsCarSeller] = useState([...cardsDataSeller]);
+  const [maxCardsToShow, setMaxCardsToShow] = useState(
+    window.innerWidth < 430 ? 3 : 6
+  );
 
   useEffect(() => {
     const handleResize = () => {
       setShowAllCards(window.innerWidth >= 770);
+      setMaxCardsToShow(window.innerWidth < 430 ? 3 : 6);
     };
     handleResize();
 
@@ -76,7 +80,7 @@ function App() {
           </div>
           <div className={styles.main__content}>
             {cardsCarSeller
-              .slice(0, showAllCards ? cardsCarSeller.length : 6)
+              .slice(0, showAllCards ? cardsCarSeller.length : maxCardsToShow)
               .map((card) => (
                 <CardSeller key={`card_${card.id}`} card={card} />
               ))}
