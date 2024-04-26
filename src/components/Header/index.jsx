@@ -30,7 +30,14 @@ export default function Header() {
       </div>
       <div className={styles.header__nav}>
         <div className={styles.header__info_nav}>
-          <img src={HeaderImages.logo} alt="logo" />
+          <div className={styles.header__nav_logo}>
+            <img
+              className={styles.header__image_logo}
+              src={HeaderImages.logo}
+              alt="logo"
+            />
+          </div>
+
           <div
             className={`${styles.header__links_operation} ${styles.position}`}
           >
@@ -52,18 +59,18 @@ export default function Header() {
           </div>
         </div>
         <div className={styles.header__block_contacts}>
-          <div className={`${styles.header__block_contacts} ${styles.city}`}>
+          <div className={`${styles.header__block_info} ${styles.city}`}>
             <img src={HeaderImages.phone} alt="phone" />
             <span className={styles.bold_green}>Заказать звонок</span>
           </div>
-          <div className={`${styles.header__block_contacts} ${styles.city}`}>
+          <div className={`${styles.header__block_info} ${styles.city}`}>
             <img src={HeaderImages.login} alt="phone" />
             <span className={styles.bold_red}>Интернет-банк</span>
           </div>
           <img
             className={styles.header__block_menu}
             src={HeaderImages.menu}
-            alt="phone"
+            alt="menu"
           />
         </div>
       </div>

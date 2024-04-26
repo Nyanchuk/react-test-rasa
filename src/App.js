@@ -33,7 +33,7 @@ function App() {
   return (
     <div>
       <Header />
-      <PrimaryContent />
+      {/* <PrimaryContent />
       <section className={styles.main}>
         <div className={styles.main__contain}>
           <div className={styles.main__contain_list}>
@@ -133,7 +133,7 @@ function App() {
           </div>
         </div>
       </section>
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
