@@ -2,13 +2,16 @@ import styles from "./footer.module.css";
 import FooterImages from "../../images/footer_img/footer_img";
 
 export default function Footer() {
-
   return (
     <div className={styles.footer}>
       <div className={styles.footer__container}>
         <div className={styles.footer__container_links}>
           <div className={styles.footer__container_block}>
-            <span>Частным лицам</span>
+            <div className={styles.footer__container_mobile}>
+              <span>Частным лицам</span>
+              <img src={FooterImages.chevron} alt="more"/>
+            </div>
+
             <a>Банковские счета</a>
             <a>Кредиты</a>
             <a>Вклады</a>
@@ -21,7 +24,10 @@ export default function Footer() {
             <a>Маркетплейс</a>
           </div>
           <div className={styles.footer__container_block}>
-            <span>Бизнесу</span>
+            <div className={styles.footer__container_mobile}>
+              <span>Бизнесу</span>
+              <img src={FooterImages.chevron} alt="more"/>
+            </div>
             <a>Експресс-МСБ</a>
             <a>Расчетно-кассовое обслуживание</a>
             <a>Онлайн резервирование счета</a>
@@ -35,7 +41,10 @@ export default function Footer() {
             <a>Факторинг</a>
           </div>
           <div className={styles.footer__container_block}>
-            <span>О банке</span>
+            <div className={styles.footer__container_mobile}>
+              <span>О банке</span>
+              <img src={FooterImages.chevron} alt="more"/>
+            </div>
             <a>Новости</a>
             <a>Вакансии</a>
             <a>Офисы</a>
@@ -98,7 +107,8 @@ export default function Footer() {
           ЦБ РФ № 1329.
         </span>
         <span>
-          Разработка сайта - <span style={{ color: "#009EE2" , paddingBottom:'32px'}}>RASA</span>
+          Разработка сайта -{" "}
+          <span style={{ color: "#009EE2", paddingBottom: "24px" }}>RASA</span>
         </span>
       </div>
     </div>
