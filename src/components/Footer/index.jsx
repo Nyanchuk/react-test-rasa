@@ -98,7 +98,7 @@ export default function Footer() {
           ЦБ РФ № 1329.
         </span>
         <span>
-          Разработка сайта - <span style={{ color: "#009EE2" }}>RASA</span>
+          Разработка сайта - <span style={{ color: "#009EE2" , paddingBottom:'32px'}}>RASA</span>
         </span>
       </div>
     </div>

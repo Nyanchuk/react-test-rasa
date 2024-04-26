@@ -88,5 +88,34 @@
   font-size: 13px;
 }
 @media (max-width: 768px) {
-
+  .footer {
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 727px;
+  }
+  .footer__container {
+    height: 480px;
+    flex-direction: column;
+  }
+  .footer__container_links {
+    width: 100%;
+    order: 2;
+    border-right: none;
+  }
+  .footer__container_block {
+    width: auto;
+    height: 100%;
+  }
+  .footer__container_contacts {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    order: 1;
+    width: 100%;
+    flex-direction: row;
+    border-bottom: 1px solid #e0e1e6;
+  }
+  .footer__block {
+    margin-top: 24px;
+    padding-bottom: 24px;
+  }
 }
