@@ -295,5 +295,21 @@ td:last-child {
   .questions__block {
     width: 100%;
   }
+}
 
+@media (max-width: 430px) {
+  .main__contain_list {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main__contain_list h2 {
+    font-size: 28px;
+  }
+  .main__contain_button {
+    margin-top: 24px;
+    width: 100%;
+    height: 40px;
+  }
 }
