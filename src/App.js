@@ -61,12 +61,13 @@ function App() {
               <CardSeller key={`card_${card.id}`} card={card} />
             ))}
           </div>
-          {/* <div className={styles.main__contein_form}>
+          <button className={styles.main__cards_check}>Показать все машины</button>
+          <div className={styles.main__contein_form}>
             <span>
               Не нашли автомобиль у нас, но нужен автокредит?{" "}
               <a>Перейдите к форме заявки</a>{" "}
             </span>
-          </div> */}
+          </div>
           {/* <div className={styles.main__contein_condition}>
             <h2>Общие условия</h2>
             <table>
