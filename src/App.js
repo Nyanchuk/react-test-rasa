@@ -56,11 +56,11 @@ function App() {
               <Card key={`card_${card.id}`} card={card} />
             ))}
           </div>
-          {/* <div className={styles.main__content}>
+          <div className={styles.main__content}>
             {cardsCarSeller.map((card) => (
               <CardSeller key={`card_${card.id}`} card={card} />
             ))}
-          </div> */}
+          </div>
           {/* <div className={styles.main__contein_form}>
             <span>
               Не нашли автомобиль у нас, но нужен автокредит?{" "}

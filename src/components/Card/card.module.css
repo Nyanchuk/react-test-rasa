@@ -67,6 +67,7 @@
   .card {
     box-sizing: border-box;
     height: 220px;
+    margin-bottom: 24px;
   }
   .card__info p {
     display: none;

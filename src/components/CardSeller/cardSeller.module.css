@@ -56,4 +56,6 @@
 .card__images_arrow:hover {
   opacity: 1;
 }
-
+@media (max-width: 768px) {
+  
+}
