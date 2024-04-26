@@ -1,6 +1,4 @@
 .header {
-  padding-left: 60px;
-  padding-right: 60px;
   height: 120px;
   font-size: 15px;
   font-weight: 400;
@@ -12,6 +10,8 @@
   align-items: center;
 }
 .border {
+  padding-left: 60px;
+  padding-right: 60px;
   border-bottom: 1px solid #e0e1e6;
 }
 .header__links {
@@ -36,6 +36,8 @@
   gap: 0px;
 }
 .header__nav {
+  padding-left: 60px;
+  padding-right: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;

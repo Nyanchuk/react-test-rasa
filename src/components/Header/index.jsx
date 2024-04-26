@@ -2,7 +2,6 @@ import styles from "./header.module.css";
 import HeaderImages from "../../images/header_img/header_img";
 
 export default function Header() {
-
   return (
     <div className={styles.header}>
       <div className={`${styles.header__info} ${styles.border}`}>
