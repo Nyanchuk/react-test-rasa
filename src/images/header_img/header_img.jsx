@@ -3,6 +3,7 @@ import logo from "./Logo.svg";
 import chevron from "./chevron.svg";
 import phone from "./Phone.svg";
 import login from "./login.svg";
+import menu from "./Menu.svg";
 
 const HeaderImages = {
   map,
@@ -10,6 +11,7 @@ const HeaderImages = {
   chevron,
   phone,
   login,
+  menu,
 };
 
 export default HeaderImages;

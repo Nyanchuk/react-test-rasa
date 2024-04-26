@@ -7,10 +7,14 @@ export default function Header() {
       <div className={`${styles.header__info} ${styles.border}`}>
         <div className={styles.header__links}>
           <div className={`${styles.header__links} ${styles.client}`}>
-            <a>Частным клиентам</a>
-            <a>Для бизнеса</a>
+            <div className={styles.header__block_client}>
+              <a>Частным клиентам</a>
+            </div>
+            <div className={styles.header__block_client}>
+              <a>Для бизнеса</a>
+            </div>
           </div>
-          <div className={styles.header__links}>
+          <div className={styles.header__links_info}>
             <a>О банке</a>
             <a>Офисы</a>
           </div>
@@ -27,7 +31,9 @@ export default function Header() {
       <div className={styles.header__nav}>
         <div className={styles.header__info_nav}>
           <img src={HeaderImages.logo} alt="logo" />
-          <div className={styles.header__links}>
+          <div
+            className={`${styles.header__links_operation} ${styles.position}`}
+          >
             <a>Кредиты</a>
             <a>Вклады</a>
             <a>Обмен валют</a>
@@ -35,21 +41,30 @@ export default function Header() {
             <a>Ипотека</a>
             <a>Переводы</a>
             <a>Страхование</a>
+            <div className={styles.header__links_more}>
+              <a>Ещё</a>
+              <img src={HeaderImages.chevron} alt="map" />
+            </div>
             <div className={`${styles.header__contacts} ${styles.city}`}>
               <a>Сервисы</a>
               <img src={HeaderImages.chevron} alt="map" />
             </div>
           </div>
         </div>
-        <div className={styles.header__contacts}>
-          <div className={`${styles.header__contacts} ${styles.city}`}>
+        <div className={styles.header__block_contacts}>
+          <div className={`${styles.header__block_contacts} ${styles.city}`}>
             <img src={HeaderImages.phone} alt="phone" />
             <span className={styles.bold_green}>Заказать звонок</span>
           </div>
-          <div className={`${styles.header__contacts} ${styles.city}`}>
+          <div className={`${styles.header__block_contacts} ${styles.city}`}>
             <img src={HeaderImages.login} alt="phone" />
             <span className={styles.bold_red}>Интернет-банк</span>
           </div>
+          <img
+            className={styles.header__block_menu}
+            src={HeaderImages.menu}
+            alt="phone"
+          />
         </div>
       </div>
     </div>

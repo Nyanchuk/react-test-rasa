@@ -16,9 +16,8 @@ function App() {
     <div>
       <Header />
       <PrimaryContent />
-      <section className={styles.main}>
+      {/* <section className={styles.main}>
         <div className={styles.main__contain}>
-          {/* ПЕРВЫЙ */}
           <div className={styles.main__contain_list}>
             <h2>Выберите себе авто</h2>
             <div className={styles.main__contain_button}>
@@ -26,7 +25,6 @@ function App() {
               <img src={MainImages.chevron} />
             </div>
           </div>
-          {/* ВТОРОЙ */}
           <div className={styles.main__contain_search}>
             <div className={styles.main__contain_stamp}>
               <span>Марка</span>
@@ -53,26 +51,22 @@ function App() {
               </div>
             </div>
           </div>
-          {/* ТРЕТИЙ*/}
           <div className={styles.main__contain_card}>
             {cards.map((card) => (
               <Card key={`card_${card.id}`} card={card} />
             ))}
           </div>
-          {/* ЧЕТВЕРТЫЙ*/}
           <div className={styles.main__content}>
             {cardsCarSeller.map((card) => (
               <CardSeller key={`card_${card.id}`} card={card} />
             ))}
           </div>
-          {/* ПЯТЫЙ */}
           <div className={styles.main__contein_form}>
             <span>
               Не нашли автомобиль у нас, но нужен автокредит?{" "}
               <a>Перейдите к форме заявки</a>{" "}
             </span>
           </div>
-          {/* ШЕСТОЙ */}
           <div className={styles.main__contein_condition}>
             <h2>Общие условия</h2>
             <table>
@@ -100,7 +94,6 @@ function App() {
               <img src={MainImages.chevronFive} alt="next" />
             </div>
           </div>
-          {/* СЕДЬМОЙ */}
           <div className={styles.main__contein_questions}>
             <div className={styles.main__contein_block}>
               <img
@@ -116,8 +109,8 @@ function App() {
             </div>
           </div>
         </div>
-      </section>
-      <Footer />
+      </section> */}
+      {/* <Footer /> */}
     </div>
   );
 }
