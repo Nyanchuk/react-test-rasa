@@ -275,5 +275,25 @@ td:last-child {
     margin-left: 16px;
     margin-right: 16px;
   }
+  .main__contein_questions {
+    box-sizing: border-box;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 73px;
+    height: auto;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .main__contein_block {
+    display: flex;
+    align-items: center;
+  }
+  .questions {
+    width: auto;
+    height: auto;
+  }
+  .questions__block {
+    width: 100%;
+  }
 
 }

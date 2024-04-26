@@ -95,7 +95,7 @@ function App() {
               <img src={MainImages.chevronFive} alt="next" />
             </div>
           </div>
-          {/* <div className={styles.main__contein_questions}>
+          <div className={styles.main__contein_questions}>
             <div className={styles.main__contein_block}>
               <img
                 style={{ width: "45px" }}
@@ -108,7 +108,7 @@ function App() {
               <div>Как подать заявку на автокредит?</div>
               <img src={MainImages.chevron_six} />
             </div>
-          </div> */}
+          </div>
         </div>
       </section>
       <Footer />
