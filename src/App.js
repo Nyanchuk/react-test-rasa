@@ -16,7 +16,7 @@ function App() {
     <div>
       <Header />
       <PrimaryContent />
-      {/* <section className={styles.main}>
+      <section className={styles.main}>
         <div className={styles.main__contain}>
           <div className={styles.main__contain_list}>
             <h2>Выберите себе авто</h2>
@@ -51,23 +51,23 @@ function App() {
               </div>
             </div>
           </div>
-          <div className={styles.main__contain_card}>
+          {/* <div className={styles.main__contain_card}>
             {cards.map((card) => (
               <Card key={`card_${card.id}`} card={card} />
             ))}
-          </div>
-          <div className={styles.main__content}>
+          </div> */}
+          {/* <div className={styles.main__content}>
             {cardsCarSeller.map((card) => (
               <CardSeller key={`card_${card.id}`} card={card} />
             ))}
-          </div>
-          <div className={styles.main__contein_form}>
+          </div> */}
+          {/* <div className={styles.main__contein_form}>
             <span>
               Не нашли автомобиль у нас, но нужен автокредит?{" "}
               <a>Перейдите к форме заявки</a>{" "}
             </span>
-          </div>
-          <div className={styles.main__contein_condition}>
+          </div> */}
+          {/* <div className={styles.main__contein_condition}>
             <h2>Общие условия</h2>
             <table>
               <tbody>
@@ -93,8 +93,8 @@ function App() {
               <a>Смотреть полные условия кредита</a>
               <img src={MainImages.chevronFive} alt="next" />
             </div>
-          </div>
-          <div className={styles.main__contein_questions}>
+          </div> */}
+          {/* <div className={styles.main__contein_questions}>
             <div className={styles.main__contein_block}>
               <img
                 style={{ width: "45px" }}
@@ -107,9 +107,9 @@ function App() {
               <div>Как подать заявку на автокредит?</div>
               <img src={MainImages.chevron_six} />
             </div>
-          </div>
+          </div> */}
         </div>
-      </section> */}
+      </section>
       <Footer />
     </div>
   );

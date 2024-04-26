@@ -206,3 +206,37 @@ td:last-child {
   font-weight: 400;
 }
 
+@media (max-width: 768px) {
+  .main__contain_list {
+    box-sizing: border-box;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 24px;
+  }
+  .main__contain_search {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .main__contain_stamp {
+    box-sizing: border-box;
+      margin-right: 20px;
+  }
+  .main__contain_input {
+    box-sizing: border-box;
+    width: 200px;
+    height: 40px;
+  }
+  .years {
+    box-sizing: border-box;
+    width: 150px;
+    height: 40px;
+  }
+  .main__contain_prise {
+    gap: 11px;
+  }
+  .main__contain_prise input {
+    box-sizing: border-box;
+    height: 40px;
+  }
+  
+}
