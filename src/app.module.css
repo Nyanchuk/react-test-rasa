@@ -222,7 +222,7 @@ td:last-child {
   }
   .main__contain_stamp {
     box-sizing: border-box;
-      margin-right: 20px;
+    margin-right: 20px;
   }
   .main__contain_input {
     box-sizing: border-box;
@@ -270,5 +270,10 @@ td:last-child {
     margin-left: 16px;
     margin-right: 16px;
   }
-  
+  .main__contein_condition {
+    margin-top: 40px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
 }

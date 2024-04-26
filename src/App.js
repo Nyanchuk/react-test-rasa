@@ -68,7 +68,7 @@ function App() {
               <a>Перейдите к форме заявки</a>{" "}
             </span>
           </div>
-          {/* <div className={styles.main__contein_condition}>
+          <div className={styles.main__contein_condition}>
             <h2>Общие условия</h2>
             <table>
               <tbody>
@@ -94,7 +94,7 @@ function App() {
               <a>Смотреть полные условия кредита</a>
               <img src={MainImages.chevronFive} alt="next" />
             </div>
-          </div> */}
+          </div>
           {/* <div className={styles.main__contein_questions}>
             <div className={styles.main__contein_block}>
               <img
