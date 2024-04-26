@@ -74,28 +74,28 @@ function App() {
               <Card key={`card_${card.id}`} card={card} />
             ))}
           </div>
-          {/* <div className={styles.main__content}>
+          <div className={styles.main__content}>
             {cardsCarSeller
               .slice(0, showAllCards ? cardsCarSeller.length : 6)
               .map((card) => (
                 <CardSeller key={`card_${card.id}`} card={card} />
               ))}
-          </div> */}
-          {/* {!showAllCards && (
+          </div>
+          {!showAllCards && (
             <button
               className={styles.main__cards_check}
               onClick={handleShowAllCards}
             >
               Показать все машины
             </button>
-          )} */}
-          {/* <div className={styles.main__contein_form}>
+          )}
+          <div className={styles.main__contein_form}>
             <span>
               Не нашли автомобиль у нас, но нужен автокредит?{" "}
               <a>Перейдите к форме заявки</a>{" "}
             </span>
-          </div> */}
-          {/* <div className={styles.main__contein_condition}>
+          </div>
+          <div className={styles.main__contein_condition}>
             <h2>Общие условия</h2>
             <table>
               <tbody>
@@ -121,8 +121,8 @@ function App() {
               <a>Смотреть полные условия кредита</a>
               <img src={MainImages.chevronFive} alt="next" />
             </div>
-          </div> */}
-          {/* <div className={styles.main__contein_questions}>
+          </div>
+          <div className={styles.main__contein_questions}>
             <div className={styles.main__contein_block}>
               <img
                 style={{ width: "45px" }}
@@ -135,7 +135,7 @@ function App() {
               <div>Как подать заявку на автокредит?</div>
               <img src={MainImages.chevron_six} />
             </div>
-          </div> */}
+          </div>
         </div>
       </section>
       <Footer />

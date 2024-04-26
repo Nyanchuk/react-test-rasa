@@ -55,6 +55,12 @@ export default function Footer() {
             <a>Монеты</a>
             <a>Непрофильные активы</a>
           </div>
+          <div className={`${styles.footer__container_block} ${styles.footer__mobile}`}>
+            <div className={styles.footer__container_mobile}>
+              <span>Дополнительные пункты</span>
+              <img src={FooterImages.chevron} alt="more"/>
+            </div>
+          </div>
         </div>
         <div className={styles.footer__container_contacts}>
           <div className={styles.footer__container_num}>

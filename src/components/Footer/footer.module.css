@@ -93,6 +93,9 @@
 .footer__container_mobile img {
   display: none;
 }
+.footer__mobile {
+  display: none;
+}
 @media (max-width: 768px) {
   .footer {
     padding-left: 16px;
@@ -168,6 +171,9 @@
     border-bottom: 1px solid #e0e1e6;
   }
   .footer__container_mobile img {
+    display: block;
+  }
+  .footer__mobile {
     display: block;
   }
   .footer__end {
