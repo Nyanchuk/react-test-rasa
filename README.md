@@ -1,3 +1,21 @@
+1. Название проекта: CОЛИД Банк
+2. Описание проекта: Верстка
+3. Структура проекта (страницы/компоненты)
+СТРАНИЦЫ:
+- В данном проекте сверстана одна страница в файле App.js
+КОМПОНЕНТЫ:
+- Card: карточка лучших предложений
+- CardSeller: карточка машин на продажу
+- Header: шапка сайта
+- Footer: подвал сайта
+4. Адаптив
+- Десктоп 1440рх
+- Под 768рх
+- От 430рх и менее
+5. Деплой на Vercel
+- https://react-test-rasa.vercel.app
+
+6. Установка и запуск
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
