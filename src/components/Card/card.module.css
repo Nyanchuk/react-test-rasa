@@ -124,13 +124,13 @@
     justify-content: space-around;
   }
   .card__images_track {
-    width: 225px;
+    width: 200px;
   }
   .card__images_arrow {
     width: 24px;
   }
   .cards__images_car {
-    width: 225px;
+    width: 200px;
     height: 120px;
   }
 }
