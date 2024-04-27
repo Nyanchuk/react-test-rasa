@@ -36,11 +36,20 @@ export default function Card({ card }) {
           alt="prev image"
           onClick={prevImage}
         />
-        <img
-          src={card.images[currentImageIndex].src}
-          alt={`image ${currentImageIndex}`}
-          className={styles.cards__images_car}
-        />
+        <div className={styles.card__images_track}>
+        <div className={styles.card__images_item} style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}>
+          {card.images.map((image, index) => (
+              <img
+                key={index}
+                src={image.src}
+                alt={`image ${index}`}
+                className={`${styles.cards__images_car} ${
+                  index === currentImageIndex ? styles.active : ""
+                }`}
+              />
+            ))}
+          </div>
+        </div>
         <img
           className={styles.card__images_arrow}
           src={MainImages.chevronThree}

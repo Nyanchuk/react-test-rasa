@@ -56,7 +56,7 @@
 .cards__images_car {
   background-size: cover;
   background-position: center;
-  width: 310px;
+  width: 256px;
 }
 .card__images_arrow {
   cursor: pointer;
@@ -67,6 +67,16 @@
 .card__images_arrow:hover {
   opacity: 1;
 }
+.card__images_track {
+  overflow: hidden;
+  width: 256px;
+}
+.card__images_item {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
 @media (max-width: 768px) {
   .card {
     box-sizing: border-box;
@@ -89,7 +99,7 @@
   .cards__images_car {
     background-size: cover;
     background-position: center;
-    width: 310px;
+    width: 256px;
     height: auto;
   }
 }
@@ -109,11 +119,14 @@
     order: 1;
     justify-content: space-around;
   }
+  .card__images_track {
+    width: 225px;
+  }
   .card__images_arrow {
     width: 24px;
   }
   .cards__images_car {
-    width: 256px;
+    width: 225px;
     height: 120px;
   }
 }
