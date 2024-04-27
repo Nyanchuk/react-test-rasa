@@ -10,6 +10,8 @@ import CardSeller from "./components/CardSeller";
 
 function App() {
   const [showAllCards, setShowAllCards] = useState(false);
+  const [isCarListExpanded, setIsCarListExpanded] = useState(true);
+  const [isSubmitApplication, setSubmitApplication] = useState(false);
   const [cards, setCards] = useState([...cardsData]);
   const [cardsCarSeller, setCardsCarSeller] = useState([...cardsDataSeller]);
   const [maxCardsToShow, setMaxCardsToShow] = useState(
@@ -42,9 +44,20 @@ function App() {
         <div className={styles.main__contain}>
           <div className={styles.main__contain_list}>
             <h2>Выберите себе авто</h2>
-            <div className={styles.main__contain_button}>
-              Свернуть список машин
-              <img src={MainImages.chevron} />
+            <div
+              className={styles.main__contain_button}
+              onClick={() => setIsCarListExpanded(!isCarListExpanded)}
+            >
+              {isCarListExpanded
+                ? "Свернуть список машин"
+                : "Показать список машин"}
+              <img
+                className={`${styles.main__contain_img} ${
+                  isCarListExpanded ? styles.rotate : ""
+                }`}
+                src={MainImages.chevron}
+                alt="more"
+              />
             </div>
           </div>
           <div className={styles.main__contain_search}>
@@ -73,25 +86,34 @@ function App() {
               </div>
             </div>
           </div>
-          <div className={styles.main__contain_card}>
-            {cards.map((card) => (
-              <Card key={`card_${card.id}`} card={card} />
-            ))}
-          </div>
-          <div className={styles.main__content}>
-            {cardsCarSeller
-              .slice(0, showAllCards ? cardsCarSeller.length : maxCardsToShow)
-              .map((card) => (
-                <CardSeller key={`card_${card.id}`} card={card} />
-              ))}
-          </div>
-          {!showAllCards && (
-            <button
-              className={styles.main__cards_check}
-              onClick={handleShowAllCards}
+          {isCarListExpanded && (
+            <div
+              className={`${styles.main__contain_card} ${
+                isCarListExpanded ? styles.show : ""
+              }`}
             >
-              Показать все машины
-            </button>
+              {cards.map((card) => (
+                <Card key={`card_${card.id}`} card={card} />
+              ))}
+              <div className={styles.main__content}>
+                {cardsCarSeller
+                  .slice(
+                    0,
+                    showAllCards ? cardsCarSeller.length : maxCardsToShow
+                  )
+                  .map((card) => (
+                    <CardSeller key={`card_${card.id}`} card={card} />
+                  ))}
+              </div>
+              {!showAllCards && (
+                <button
+                  className={styles.main__cards_check}
+                  onClick={handleShowAllCards}
+                >
+                  Показать все машины
+                </button>
+              )}
+            </div>
           )}
           <div className={styles.main__contein_form}>
             <span>
@@ -135,9 +157,29 @@ function App() {
               />
               <div className={styles.questions}>Часто задаваемые вопросы</div>
             </div>
-            <div className={styles.questions__block}>
-              <div>Как подать заявку на автокредит?</div>
-              <img src={MainImages.chevron_six} />
+            <div>
+              <div
+                onClick={() => setSubmitApplication(!isSubmitApplication)}
+                className={styles.questions__block}
+              >
+                <div>Как подать заявку на автокредит?</div>
+                <img
+                  className={`${styles.main__contain_img} ${
+                    isSubmitApplication ? styles.rotate : ""
+                  }`}
+                  src={MainImages.chevron_six}
+                />
+              </div>
+
+              {isSubmitApplication && (
+                <div
+                  className={`${styles.answer} ${
+                    isSubmitApplication && styles.show
+                  }`}
+                >
+                  Здесь будет ответ на вопрос как подать заявку на кредит
+                </div>
+              )}
             </div>
           </div>
         </div>
