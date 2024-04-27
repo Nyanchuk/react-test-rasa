@@ -64,6 +64,7 @@ a {
   color: #760135;
 }
 .city {
+  cursor: pointer;
   gap: 0px;
 }
 .header__nav {
