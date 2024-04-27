@@ -3,6 +3,9 @@
   font-size: 15px;
   font-weight: 400;
 }
+a {
+  cursor: pointer;
+}
 .header__info {
   height: 52px;
   display: flex;

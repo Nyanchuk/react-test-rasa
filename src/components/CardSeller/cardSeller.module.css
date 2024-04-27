@@ -43,9 +43,9 @@
   gap: 23px;
 }
 .cards__images_car {
-    background-size: cover;
-    background-position: center;
-    width: 310px;
+  background-size: cover;
+  background-position: center;
+  width: 310px;
 }
 .card__images_arrow {
   cursor: pointer;

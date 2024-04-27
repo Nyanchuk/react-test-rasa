@@ -1,5 +1,4 @@
 import styles from "./cardSeller.module.css";
-import MainImages from "../../images/main_img/main_img";
 import { useState } from "react";
 
 export default function CardSeller({ card }) {

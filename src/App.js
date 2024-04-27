@@ -170,7 +170,6 @@ function App() {
                   src={MainImages.chevron_six}
                 />
               </div>
-
               {isSubmitApplication && (
                 <div
                   className={`${styles.answer} ${

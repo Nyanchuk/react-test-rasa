@@ -61,7 +61,7 @@
 .card__images_arrow {
   cursor: pointer;
   width: 43px;
-  opacity: 0.2;
+  opacity: 0.4;
   transition: all 0.3s;
 }
 .card__images_arrow:hover {
@@ -75,6 +75,10 @@
   display: flex;
   align-items: center;
   transition: transform 0.3s ease;
+}
+.card__images_arrow[disabled] {
+  opacity: 0;
+  pointer-events: none;
 }
 
 @media (max-width: 768px) {

@@ -60,6 +60,7 @@
   color: rgba(0, 0, 0, 1);
 }
 .main__contain_button {
+  cursor: pointer;
   width: 256px;
   height: 40px;
   display: flex;
@@ -162,6 +163,7 @@
   font-weight: 400;
 }
 .main__contein_form a {
+  cursor: pointer;
   color: rgba(118, 1, 53, 1);
   font-weight: 500;
 }
@@ -207,6 +209,7 @@ td:last-child {
   justify-content: flex-end;
 }
 .condition a {
+  cursor: pointer;
   margin-right: 16px;
   font-weight: 500;
   font-size: 15px;
@@ -231,6 +234,7 @@ td:last-child {
   gap: 16px;
 }
 .questions__block {
+  cursor: pointer;
   box-sizing: border-box;
   width: 755px;
   height: 52px;

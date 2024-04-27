@@ -10,6 +10,7 @@ const cardsData = [
     images: [
       { id: 1, src: MainImages.cardCarOne },
       { id: 2, src: MainImages.cardCarOneNext },
+      { id: 2, src: MainImages.cardCarOneNext },
     ],
   },
   {

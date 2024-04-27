@@ -34,11 +34,15 @@ export default function Card({ card }) {
           className={styles.card__images_arrow}
           src={MainImages.chevronFore}
           alt="prev image"
+          disabled={currentImageIndex === 0}
           onClick={prevImage}
         />
         <div className={styles.card__images_track}>
-        <div className={styles.card__images_item} style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}>
-          {card.images.map((image, index) => (
+          <div
+            className={styles.card__images_item}
+            style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
+          >
+            {card.images.map((image, index) => (
               <img
                 key={index}
                 src={image.src}
@@ -54,6 +58,11 @@ export default function Card({ card }) {
           className={styles.card__images_arrow}
           src={MainImages.chevronThree}
           alt="next image"
+          style={{
+            opacity: currentImageIndex === card.images.length - 1 ? 0 : 0.4,
+            pointerEvents:
+              currentImageIndex === card.images.length - 1 ? "none" : "auto",
+          }}
           onClick={nextImage}
         />
       </div>

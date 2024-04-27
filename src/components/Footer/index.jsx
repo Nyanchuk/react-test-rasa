@@ -9,9 +9,8 @@ export default function Footer() {
           <div className={styles.footer__container_block}>
             <div className={styles.footer__container_mobile}>
               <span>Частным лицам</span>
-              <img src={FooterImages.chevron} alt="more"/>
+              <img src={FooterImages.chevron} alt="more" />
             </div>
-
             <a>Банковские счета</a>
             <a>Кредиты</a>
             <a>Вклады</a>
@@ -26,7 +25,7 @@ export default function Footer() {
           <div className={styles.footer__container_block}>
             <div className={styles.footer__container_mobile}>
               <span>Бизнесу</span>
-              <img src={FooterImages.chevron} alt="more"/>
+              <img src={FooterImages.chevron} alt="more" />
             </div>
             <a>Експресс-МСБ</a>
             <a>Расчетно-кассовое обслуживание</a>
@@ -43,7 +42,7 @@ export default function Footer() {
           <div className={styles.footer__container_block}>
             <div className={styles.footer__container_mobile}>
               <span>О банке</span>
-              <img src={FooterImages.chevron} alt="more"/>
+              <img src={FooterImages.chevron} alt="more" />
             </div>
             <a>Новости</a>
             <a>Вакансии</a>
@@ -55,10 +54,12 @@ export default function Footer() {
             <a>Монеты</a>
             <a>Непрофильные активы</a>
           </div>
-          <div className={`${styles.footer__container_block} ${styles.footer__mobile}`}>
+          <div
+            className={`${styles.footer__container_block} ${styles.footer__mobile}`}
+          >
             <div className={styles.footer__container_mobile}>
               <span>Дополнительные пункты</span>
-              <img src={FooterImages.chevron} alt="more"/>
+              <img src={FooterImages.chevron} alt="more" />
             </div>
           </div>
         </div>
