@@ -61,20 +61,20 @@ function App() {
             </div>
           </div>
           <div className={styles.main__contain_search}>
-            <div className={styles.main__contain_stamp}>
-              <span>Марка</span>
-              <div className={styles.main__contain_input}>
-                <input placeholder="Выбрать"></input>
-                <img src={MainImages.chevron_two} />
+            <div className={styles.main__block_search}>
+              <div className={styles.main__contain_stamp}>
+                <span>Марка</span>
+                <div className={styles.main__contain_input}>
+                  <input placeholder="Выбрать"></input>
+                  <img src={MainImages.chevron_two} />
+                </div>
               </div>
-            </div>
-            <div
-              className={`${styles.main__contain_stamp} ${styles.years_stamp}`}
-            >
-              <span>Год</span>
-              <div className={`${styles.main__contain_input} ${styles.years}`}>
-                <input placeholder="Выбрать"></input>
-                <img src={MainImages.chevron_two} />
+              <div className={styles.main__contain_years}>
+                <span>Год</span>
+                <div className={styles.main__input_years}>
+                  <input placeholder="Выбрать"></input>
+                  <img src={MainImages.chevron_two} />
+                </div>
               </div>
             </div>
             <div className={styles.main__contain_prises}>
