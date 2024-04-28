@@ -5,19 +5,19 @@ import { Modal } from "../Modal";
 
 export default function Header() {
   const [isWideScreen, setIsWideScreen] = useState(window.innerWidth >= 430);
-  // Стейт для открытия модального окна
   const [openModal, setOpenModal] = useState(false);
-  // Стейт для хранения ошибок
-  const [error, setError] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
 
-  // Открывает модальное окно
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
   const openModalClick = () => {
     setOpenModal(true);
   };
-  // Закрывает модальное окно
+
   const closeModal = () => {
     setOpenModal(false);
-    setError("");
   };
 
   useEffect(() => {
@@ -79,13 +79,39 @@ export default function Header() {
             <a>Ипотека</a>
             <a>Переводы</a>
             <a>Страхование</a>
-            <div className={styles.header__links_more}>
+            <div onClick={toggleDropdown} className={styles.header__links_more}>
               <a>Ещё</a>
               <img src={HeaderImages.chevron} alt="map" />
+              {isOpen && (
+                <div className={styles.dropdownContent}>
+                  <a>Интернет-банк</a>
+                  <a>Монеты</a>
+                  <a>Сейфовые яйчейки</a>
+                  <div className={styles.mobile__mobile}>
+                    <a>Карты</a>
+                    <a>Ипотека</a>
+                    <a>Переводы</a>
+                    <a>Страхование</a>
+                  </div>
+                  <div className={styles.mobile__table}>
+                    <a>Страхование</a>
+                  </div>
+                </div>
+              )}
             </div>
-            <div className={`${styles.header__contacts} ${styles.city}`}>
+            <div
+              onClick={toggleDropdown}
+              className={`${styles.header__contacts} ${styles.city}`}
+            >
               <a>Сервисы</a>
               <img src={HeaderImages.chevron} alt="map" />
+              {isOpen && (
+                <div className={styles.dropdownContent}>
+                  <a>Интернет-банк</a>
+                  <a>Монеты</a>
+                  <a>Сейфовые яйчейки</a>
+                </div>
+              )}
             </div>
           </div>
         </div>

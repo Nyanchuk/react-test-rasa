@@ -292,8 +292,6 @@ td:last-child {
   }
   .main__content {
     box-sizing: border-box;
-    /* padding-left: 16px; */
-    padding-right: 16px;
     grid-template-columns: repeat(2, 1fr);
   }
   .main__cards_check {
