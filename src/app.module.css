@@ -141,9 +141,15 @@
 }
 .main__contain_input input::placeholder {
   color: rgba(0, 0, 0, 0.5);
+  font-size: 13px;
 }
-.years {
-  width: 185px;
+.main__contain_years input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 13px;
+}
+.main__contain_prise input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 13px;
 }
 .main__contain_prises span {
   font-weight: 500;
@@ -161,6 +167,7 @@
   padding-left: 16px;
   width: 150px;
   height: 37px;
+  font-size: 15px;
   background-color: rgba(236, 237, 240, 1);
   border: 1px solid rgba(236, 237, 240, 1);
   border-radius: 8px;
@@ -290,8 +297,6 @@ td:last-child {
     padding-left: 16px;
     padding-right: 16px;
   }
-
-
   .main__block_search {
     gap: 16px;
     justify-content: flex-start;
