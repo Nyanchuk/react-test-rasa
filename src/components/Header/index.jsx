@@ -1,9 +1,24 @@
 import styles from "./header.module.css";
 import HeaderImages from "../../images/header_img/header_img";
 import { useEffect, useState } from "react";
+import { Modal } from "../Modal";
 
 export default function Header() {
   const [isWideScreen, setIsWideScreen] = useState(window.innerWidth >= 430);
+  // Стейт для открытия модального окна
+  const [openModal, setOpenModal] = useState(false);
+  // Стейт для хранения ошибок
+  const [error, setError] = useState("");
+
+  // Открывает модальное окно
+  const openModalClick = () => {
+    setOpenModal(true);
+  };
+  // Закрывает модальное окно
+  const closeModal = () => {
+    setOpenModal(false);
+    setError("");
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -91,9 +106,11 @@ export default function Header() {
             className={styles.header__block_menu}
             src={HeaderImages.menu}
             alt="menu"
+            onClick={openModalClick}
           />
         </div>
       </div>
+      {openModal && <Modal closeModal={closeModal} />}
     </div>
   );
 }
