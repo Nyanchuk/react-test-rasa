@@ -1,9 +1,24 @@
 import styles from "./header.module.css";
 import HeaderImages from "../../images/header_img/header_img";
 import { useEffect, useState } from "react";
+import { Modal } from "../Modal";
 
 export default function Header() {
   const [isWideScreen, setIsWideScreen] = useState(window.innerWidth >= 430);
+  const [openModal, setOpenModal] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const openModalClick = () => {
+    setOpenModal(true);
+  };
+
+  const closeModal = () => {
+    setOpenModal(false);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -54,7 +69,6 @@ export default function Header() {
               alt="logo"
             />
           </div>
-
           <div
             className={`${styles.header__links_operation} ${styles.position}`}
           >
@@ -65,13 +79,39 @@ export default function Header() {
             <a>Ипотека</a>
             <a>Переводы</a>
             <a>Страхование</a>
-            <div className={styles.header__links_more}>
+            <div onClick={toggleDropdown} className={styles.header__links_more}>
               <a>Ещё</a>
               <img src={HeaderImages.chevron} alt="map" />
+              {isOpen && (
+                <div className={styles.dropdownContent}>
+                  <a>Интернет-банк</a>
+                  <a>Монеты</a>
+                  <a>Сейфовые яйчейки</a>
+                  <div className={styles.mobile__mobile}>
+                    <a>Карты</a>
+                    <a>Ипотека</a>
+                    <a>Переводы</a>
+                    <a>Страхование</a>
+                  </div>
+                  <div className={styles.mobile__table}>
+                    <a>Страхование</a>
+                  </div>
+                </div>
+              )}
             </div>
-            <div className={`${styles.header__contacts} ${styles.city}`}>
+            <div
+              onClick={toggleDropdown}
+              className={`${styles.header__contacts} ${styles.city}`}
+            >
               <a>Сервисы</a>
               <img src={HeaderImages.chevron} alt="map" />
+              {isOpen && (
+                <div className={styles.dropdownContent}>
+                  <a>Интернет-банк</a>
+                  <a>Монеты</a>
+                  <a>Сейфовые яйчейки</a>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -92,9 +132,11 @@ export default function Header() {
             className={styles.header__block_menu}
             src={HeaderImages.menu}
             alt="menu"
+            onClick={openModalClick}
           />
         </div>
       </div>
+      {openModal && <Modal closeModal={closeModal} />}
     </div>
   );
 }
