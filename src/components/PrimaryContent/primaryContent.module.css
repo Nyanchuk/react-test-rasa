@@ -128,8 +128,10 @@ h1 {
     display: none;
   }
   .primaryContent__lineimg {
-    top: -42px;
-    left: 17%;
+    transform: scale(1.25);
+      position: absolute;
+      left: -170%;
+      top: 42px;
     z-index: -99;
   }
   .primaryContent__carimg {
