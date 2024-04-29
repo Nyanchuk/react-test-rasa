@@ -83,6 +83,7 @@
   display: flex;
 }
 .main__contain_stamp {
+  position: relative;
   width: 441px;
   margin-right: 24px;
 }
@@ -95,6 +96,7 @@
   color: rgba(0, 0, 0, 1);
 }
 .main__contain_input {
+  /* position: relative; */
   width: 407px;
   height: 38px;
   margin-top: 8px;
@@ -121,6 +123,9 @@
   border: 1px solid rgba(236, 237, 240, 1);
   border-radius: 8px;
 }
+.main__contain_years {
+  position: relative;
+}
 .main__contain_years span {
   font-weight: 500;
   font-size: 15px;
@@ -134,6 +139,8 @@
   border-radius: 8px;
 }
 .main__contain_input input {
+  width: 100%;
+  outline: none;
   background-color: transparent;
   border: none;
   font-size: 13px;
@@ -285,8 +292,54 @@ td:last-child {
 .main__cards_check {
   display: none;
 }
+/* Фильтры */
+.dropdown__stamp {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(236, 237, 240, 1);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.dropdown {
+  min-width: 128px;
+  max-height: 200px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(118, 1, 53, 1) rgba(236, 237, 240, 1);
+}
+.dropdown::-webkit-scrollbar {
+  width: 8px;
+}
+.dropdown::-webkit-scrollbar-track {
+  background: rgba(236, 237, 240, 1);
+}
+.dropdown::-webkit-scrollbar-thumb {
+  background-color: rgba(118, 1, 53, 1);
+  border-radius: 4px;
+}
+.dropdownList {
+  outline: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.dropdownList li {
+  padding: 10px;
+  cursor: pointer;
+  transition: all .3s;
+}
+.dropdownList li:hover {
+  color: rgba(118, 1, 53, 1);
+}
 
 @media (max-width: 768px) {
+  .dropdown__stamp {
+    font-size: 13px;
+  }
   .main__contain_list {
     box-sizing: border-box;
     padding-left: 16px;
