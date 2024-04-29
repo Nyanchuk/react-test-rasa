@@ -17,6 +17,25 @@ function App() {
   const [maxCardsToShow, setMaxCardsToShow] = useState(
     window.innerWidth < 430 ? 3 : 6
   );
+  const [isOpenStamp, setIsOpenStamp] = useState(false);
+  const [selectedStamp, setSelectedStamp] = useState("");
+  const [isOpenStampYears, setIsOpenYears] = useState(false);
+  const [selectedYears, setSelectedYears] = useState("");
+
+  const toggleDropdown = () => {
+    setIsOpenStamp(!isOpenStamp);
+  };
+  const handleItemClick = (item) => {
+    setSelectedStamp(item);
+    setIsOpenStamp(false);
+  };
+  const toggleDropdownYears = () => {
+    setIsOpenYears(!isOpenStampYears);
+  };
+  const handleItemClickYears = (item) => {
+    setSelectedYears(item);
+    setIsOpenYears(false);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -65,16 +84,72 @@ function App() {
               <div className={styles.main__contain_stamp}>
                 <span>Марка</span>
                 <div className={styles.main__contain_input}>
-                  <input placeholder="Выбрать"></input>
-                  <img src={MainImages.chevron_two} />
+                  <input
+                    placeholder="Выбрать"
+                    value={selectedStamp}
+                    onChange={(e) => setSelectedStamp(e.target.value)}
+                  ></input>
+                  <img
+                    className={`${styles.main__contain_img} ${
+                      isOpenStamp ? styles.rotate : ""
+                    }`}
+                    onClick={toggleDropdown}
+                    src={MainImages.chevron_two}
+                  />
                 </div>
+                {isOpenStamp && (
+                  <div className={styles.dropdown__stamp}>
+                    <div className={styles.dropdown}>
+                      <ul className={styles.dropdownList}>
+                        {[
+                          ...new Set(cardsCarSeller.map((card) => card.title)),
+                        ].map((title) => (
+                          <li
+                            key={title}
+                            onClick={() => handleItemClick(title)}
+                          >
+                            {title}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                )}
               </div>
               <div className={styles.main__contain_years}>
                 <span>Год</span>
                 <div className={styles.main__input_years}>
-                  <input placeholder="Выбрать"></input>
-                  <img src={MainImages.chevron_two} />
+                  <input
+                    placeholder="Выбрать"
+                    value={selectedYears}
+                    onChange={(e) => setSelectedYears(e.target.value)}
+                  ></input>
+                  <img
+                    src={MainImages.chevron_two}
+                    className={`${styles.main__contain_img} ${
+                      isOpenStampYears ? styles.rotate : ""
+                    }`}
+                    onClick={toggleDropdownYears}
+                  />
                 </div>
+                {isOpenStampYears && (
+                  <div className={styles.dropdown__stamp}>
+                    <div className={styles.dropdown}>
+                      <ul className={styles.dropdownList}>
+                        {[
+                          ...new Set(cardsCarSeller.map((card) => card.year)),
+                        ].map((year) => (
+                          <li
+                            key={year}
+                            onClick={() => handleItemClickYears(year)}
+                          >
+                            {year}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
             <div className={styles.main__contain_prises}>
