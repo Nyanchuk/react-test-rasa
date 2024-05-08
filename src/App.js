@@ -38,19 +38,6 @@ function App() {
     setIsOpenYears(false);
   };
 
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setShowAllCards(window.innerWidth >= 770);
-  //     setMaxCardsToShow(window.innerWidth < 430 ? 3 : 6);
-  //   };
-  //   handleResize();
-
-  //   window.addEventListener("resize", handleResize);
-
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
   useEffect(() => {
     const handleResize = () => {
       setIsWideScreen(window.innerWidth >= 770);
@@ -58,16 +45,11 @@ function App() {
     };
     handleResize();
 
-    // window.addEventListener("resize", handleResize);
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
-  // const handleShowAllCards = () => {
-  //   setShowAllCards(true);
-  // };
   const handleShowAllCards = () => {
     if (!isWideScreen) {
       setShowAllCards(true);
@@ -200,21 +182,13 @@ function App() {
                   ))}
               </div>
               {!showAllCards && (
-            <button
-              className={styles.main__cards_check}
-              onClick={handleShowAllCards}
-            >
-              Показать все машины
-            </button>
-          )}
-              {/* {!showAllCards && (
                 <button
                   className={styles.main__cards_check}
                   onClick={handleShowAllCards}
                 >
                   Показать все машины
                 </button>
-              )} */}
+              )}
             </div>
           )}
           <div className={styles.main__contein_form}>
