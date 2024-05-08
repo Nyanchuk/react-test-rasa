@@ -34,6 +34,14 @@ export default function Header() {
     };
   }, []);
 
+  useEffect(() => {
+    if (openModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [openModal]);
+
   return (
     <div className={styles.header}>
       <div className={`${styles.header__info} ${styles.border}`}>

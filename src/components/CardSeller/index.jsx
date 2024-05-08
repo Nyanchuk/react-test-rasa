@@ -6,16 +6,18 @@ export default function CardSeller({ card }) {
 
   return (
     <div className={styles.card}>
-      <img
-        src={card.images[currentImageIndex].src}
-        alt={`image ${currentImageIndex}`}
-      />
+      <a href="#">
+        <img
+          src={card.images[currentImageIndex].src}
+          alt={`image ${currentImageIndex}`}
+        />
+      </a>
       <h2>{card.title}</h2>
       <div>
         <span>{card.city}</span>
         <div className={styles.card__info_link}>
           <h3>{card.price} ₽</h3>
-          <a>Подробнее</a>
+          <a href="#">Подробнее</a>
         </div>
       </div>
     </div>

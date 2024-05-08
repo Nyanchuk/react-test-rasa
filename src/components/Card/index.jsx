@@ -25,7 +25,7 @@ export default function Card({ card }) {
         <p>{card.description}</p>
         <h3>От {card.price} ₽</h3>
         <div className={styles.card__info_link}>
-          <a>Подробнее</a>
+          <a href="#">Подробнее</a>
           <img src={MainImages.arrowTwo} />
         </div>
       </div>
