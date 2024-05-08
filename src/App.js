@@ -58,7 +58,7 @@ function App() {
     };
     handleResize();
 
-    window.addEventListener("resize", handleResize);
+    // window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -70,7 +70,7 @@ function App() {
   // };
   const handleShowAllCards = () => {
     if (!isWideScreen) {
-      setIsWideScreen(true);
+      setShowAllCards(true);
     }
   };
 
@@ -193,13 +193,13 @@ function App() {
                 {cardsCarSeller
                   .slice(
                     0,
-                    isWideScreen ? cardsCarSeller.length : maxCardsToShow
+                    showAllCards ? cardsCarSeller.length : maxCardsToShow
                   )
                   .map((card) => (
                     <CardSeller key={`card_${card.id}`} card={card} />
                   ))}
               </div>
-              {!isWideScreen && (
+              {!showAllCards && (
             <button
               className={styles.main__cards_check}
               onClick={handleShowAllCards}
