@@ -14,6 +14,7 @@ function App() {
   const [isSubmitApplication, setSubmitApplication] = useState(false);
   const [cards, setCards] = useState([...cardsData]);
   const [cardsCarSeller, setCardsCarSeller] = useState([...cardsDataSeller]);
+  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth >= 770);
   const [maxCardsToShow, setMaxCardsToShow] = useState(
     window.innerWidth < 430 ? 3 : 6
   );
@@ -37,9 +38,22 @@ function App() {
     setIsOpenYears(false);
   };
 
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setShowAllCards(window.innerWidth >= 770);
+  //     setMaxCardsToShow(window.innerWidth < 430 ? 3 : 6);
+  //   };
+  //   handleResize();
+
+  //   window.addEventListener("resize", handleResize);
+
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
   useEffect(() => {
     const handleResize = () => {
-      setShowAllCards(window.innerWidth >= 770);
+      setIsWideScreen(window.innerWidth >= 770);
       setMaxCardsToShow(window.innerWidth < 430 ? 3 : 6);
     };
     handleResize();
@@ -51,8 +65,13 @@ function App() {
     };
   }, []);
 
+  // const handleShowAllCards = () => {
+  //   setShowAllCards(true);
+  // };
   const handleShowAllCards = () => {
-    setShowAllCards(true);
+    if (!isWideScreen) {
+      setIsWideScreen(true);
+    }
   };
 
   return (
@@ -174,20 +193,28 @@ function App() {
                 {cardsCarSeller
                   .slice(
                     0,
-                    showAllCards ? cardsCarSeller.length : maxCardsToShow
+                    isWideScreen ? cardsCarSeller.length : maxCardsToShow
                   )
                   .map((card) => (
                     <CardSeller key={`card_${card.id}`} card={card} />
                   ))}
               </div>
-              {!showAllCards && (
+              {!isWideScreen && (
+            <button
+              className={styles.main__cards_check}
+              onClick={handleShowAllCards}
+            >
+              Показать все машины
+            </button>
+          )}
+              {/* {!showAllCards && (
                 <button
                   className={styles.main__cards_check}
                   onClick={handleShowAllCards}
                 >
                   Показать все машины
                 </button>
-              )}
+              )} */}
             </div>
           )}
           <div className={styles.main__contein_form}>

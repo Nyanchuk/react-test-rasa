@@ -71,11 +71,13 @@ export default function Header() {
       <div className={styles.header__nav}>
         <div className={styles.header__info_nav}>
           <div className={styles.header__nav_logo}>
-            <img
-              className={styles.header__image_logo}
-              src={HeaderImages.logo}
-              alt="logo"
-            />
+            <a href="/">
+              <img
+                className={styles.header__image_logo}
+                src={HeaderImages.logo}
+                alt="logo"
+              />
+            </a>
           </div>
           <div
             className={`${styles.header__links_operation} ${styles.position}`}
