@@ -41,7 +41,7 @@ function App() {
   useEffect(() => {
     const handleResize = () => {
       setIsWideScreen(window.innerWidth >= 770);
-      setMaxCardsToShow(window.innerWidth < 430 ? 3 : 6);
+      setMaxCardsToShow(isWideScreen ? cardsCarSeller.length : window.innerWidth < 430 ? 3 : 6);
     };
     handleResize();
 
