@@ -16,7 +16,8 @@
   font-size: 15px;
   color: rgba(37, 180, 86, 1);
 }
-.card__info h2 {
+.card__info_link {
+  text-decoration: none;
   margin: 0;
   font-weight: 500;
   font-size: 24px;

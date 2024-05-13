@@ -21,7 +21,7 @@ export default function Card({ card }) {
     <div className={styles.card}>
       <div className={styles.card__info}>
         <span>Лучшее предложение</span>
-        <h2>{card.title}</h2>
+        <a href="#" className={styles.card__info_link}>{card.title}</a>
         <p>{card.description}</p>
         <h3>От {card.price} ₽</h3>
         <div className={styles.card__info_link}>
