@@ -12,7 +12,7 @@ export default function CardSeller({ card }) {
           alt={`image ${currentImageIndex}`}
         />
       </a>
-      <h2>{card.title}</h2>
+      <a href="#" className={styles.card__info_link}>{card.title}</a>
       <div>
         <span>{card.city}</span>
         <div className={styles.card__info_link}>
